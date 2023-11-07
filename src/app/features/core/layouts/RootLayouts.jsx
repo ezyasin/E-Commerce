@@ -4,7 +4,7 @@ import Footer from '../components/Footer'
 
 function RootLayouts({children}){
   return (
-    <main className='flex-1 items-center flex-col h-screen justify-between bg-red-200'>
+    <main className='flex-1 items-center flex-col h-screen justify-between'>
       <div className="">
         <Header />
         </div>
