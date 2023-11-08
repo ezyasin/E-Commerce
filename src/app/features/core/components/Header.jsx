@@ -3,7 +3,7 @@ import React from 'react'
 export default function Header() {
   return (
     // TOP HEADER
-    <>
+    <header>
     <div className="bg-black py-3 text-white h-12">
       <div className="flex gap-6 items-center justify-center">
         <div className="text-sm font-normal leading-tight text-center">
@@ -14,9 +14,7 @@ export default function Header() {
         </a>
       </div>
     </div>
-
     {/* MAIN HEADER */}
-    
     <div className="border grid grid-cols-3 gap-3 h-16 items-center">
       <div className="ml-10">Exclusive</div>
       <div className="flex justify-center gap-8">
@@ -31,14 +29,12 @@ export default function Header() {
           <label className="sr-only" htmlFor="search">
             Search
           </label>
-
           <input
             className="h-10 w-full rounded-lg border-none bg-neutral-100 pe-10 ps-4 text-sm shadow-sm sm:w-56"
             id="search"
             type="search"
             placeholder="Search website..."
           />
-
           <button
             type="button"
             className="absolute end-1 top-1/2 -translate-y-1/2 rounded-md bg-gray-50 p-2 text-gray-600 transition hover:text-gray-700"
@@ -60,11 +56,8 @@ export default function Header() {
             </svg>
           </button>
         </div>      
-      
     </div>
     </div>
-
-
-    </>
+    </header>
   )
 }
