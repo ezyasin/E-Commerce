@@ -1,9 +1,9 @@
 import React from 'react'
-import Login from '../../features/user/Login'
+import Signup from '../../features/user/Signup'
 
 function page() {
   return (
-    <Login />
+    <Signup />
   )
 }
 
