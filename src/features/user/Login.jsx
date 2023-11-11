@@ -1,10 +1,10 @@
 import React from "react";
 import Image from "next/image";
-import loginImage from "../../../public/assets/image/loginimage.png";
+import loginImage from "../../../public/assets/images/loginimage.png";
 
 function Login() {
   return (
-    <div className="flex mt-10">
+    <div className="flex mt-10 mb-20">
       <div className="flex-1">
         <Image src={loginImage} alt="logo" width={600} height={600} />
       </div>

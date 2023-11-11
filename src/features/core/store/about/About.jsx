@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import aboutImage from "../../../../../public/assets/image/aboutimage.png";
+import aboutImage from "../../../../../public/assets/images/aboutimage.png";
 import servicesImage from "../../../../../public/assets/icons/services.svg";
 import servicesdolar from "../../../../../public/assets/icons/services-dolar.svg";
 import servicescart from "../../../../../public/assets/icons/services-cart.svg";

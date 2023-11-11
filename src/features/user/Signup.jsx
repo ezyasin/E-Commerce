@@ -1,11 +1,11 @@
 import React from "react";
 import Image from "next/image";
-import signupImage from "../../../public/assets/image/loginimage.png";
-import googlesvg from "../../../public/assets/image/google.svg";
+import signupImage from "../../../public/assets/images/loginimage.png";
+import googlesvg from "../../../public/assets/images/google.svg";
 
 export function Signup() {
     return (
-        <div className="flex mt-10">
+        <div className="flex mt-10 mb-20">
             <div className="flex-1">
                 <Image src={signupImage} alt="logo" width={600} height={600} />
             </div>
