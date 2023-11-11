@@ -2,20 +2,16 @@ import React from 'react'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 
-function RootLayouts({children}){
+function RootLayouts({ children }) {
   return (
-    <main className='flex-1 items-center flex-col h-screen justify-between'>
-      <div className="">
+    <main className="flex flex-col min-h-screen">
+      <div className="flex-grow">
         <Header />
-        </div>
-        <div className='h-4/5'>
         {children}
-        </div>
-        <div>
-        <Footer />
-        </div>
+      </div>
+      <Footer />
     </main>
-  )
+  );
 }
 
 export default RootLayouts
