@@ -37,3 +37,6 @@ next-env.d.ts
 
 # assets
 /public
+
+#development notes
+notes.md

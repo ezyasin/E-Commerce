@@ -3,7 +3,7 @@ import Image from "next/image";
 import iphone from "../../../public/assets/images/iphone.png";
 import ipicon from "../../../public/assets/icons/iphone.svg";
 import arrow from "../../../public/assets/icons/arrowrighticon.svg";
-import ProductCard from "@/features/homepage/ProductCard";
+import ProductCard from "@/features/homepage/ProductCart";
 import CountdownTimer from "@/features/homepage/CountdownTimer";
 import Category from "@/features/homepage/Category";
 import BestSelling from "@/features/homepage/BestSelling";
