@@ -1,6 +1,7 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { FaTrash } from "react-icons/fa";
 import EmptyCart from "./EmptyCart";
 
@@ -67,14 +68,16 @@ function CartPage() {
                     key={item.id}
                     className="mb-4 flex items-center justify-between"
                   >
-                    <p className="text-lg font-bold">{item.name}</p>
-                    <Image
-                      src={item.image}
-                      width={40}
-                      height={40}
-                      alt="product image"
-                    />
-                    <p className="text-gray-900">${item.price}</p>
+                    <div className="flex">
+                      <Image
+                        src={item.image}
+                        width={40}
+                        height={40}
+                        alt="product image"
+                      />
+                      <p className="text-lg font-bold ml-2 mr-4">{item.name}</p>
+                    </div>
+                    <p className="text-gray-900 ">${item.price}</p>
                     <div className="flex items-center">
                       <input
                         type="number"
@@ -91,14 +94,11 @@ function CartPage() {
                         <FaTrash />
                       </button>
                     </div>
-                    <p className="text-gray-900">
-                      ${item.price * item.quantity}
+                    <p className="text-gray-900 ml-40">
+                      ${subtotal.toFixed(2)}
                     </p>
                   </div>
                 ))}
-                <p className="text-xl font-bold mt-4">
-                  Total: ${subtotal.toFixed(2)}
-                </p>
               </div>
             )}
           </div>
@@ -119,9 +119,11 @@ function CartPage() {
                 <span>${total.toFixed(2)}</span>
               </div>
             </div>
-            <button className="bg-red-500 text-white rounded-sm p-2 mb-4 ml-16 mt-8">
-              Process to checkout
-            </button>
+            <Link href={"/checkout"}>
+              <button className="bg-red-500 text-white rounded-sm p-2 mb-4 ml-16 mt-8">
+                Process to checkout
+              </button>
+            </Link>
           </div>
         </div>
       )}

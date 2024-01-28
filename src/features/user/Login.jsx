@@ -9,7 +9,7 @@ function Login() {
         <Image src={loginImage} alt="logo" width={600} height={600} />
       </div>
       <div className="flex-1 mt-20 ">
-        <h1 className="text-3xl mb-6 font-semibold">Log in to Exclusive</h1>
+        <h1 className="text-3xl mb-6 font-semibold">Log in to Techno Market</h1>
         <h2>Enter your details below</h2>
         <div>
           <form>
@@ -37,7 +37,9 @@ function Login() {
               >
                 Log in
               </button>
-              <a href="#" className="mr-5 text-red-500">Forgot Password?</a>
+              <a href="#" className="mr-5 text-red-500">
+                Forgot Password?
+              </a>
             </div>
           </form>
         </div>

@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 const CountdownTimer = () => {
   const calculateTimeLeft = () => {
     const now = new Date();
-    const targetDate = new Date("2023-12-31T23:59:59");
+    const targetDate = new Date("2024-06-01T23:59:59");
     const difference = targetDate - now;
 
     if (difference > 0) {
@@ -20,15 +20,20 @@ const CountdownTimer = () => {
     }
   };
 
-  const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
+  const [timeLeft, setTimeLeft] = useState(null);
 
   useEffect(() => {
+    setTimeLeft(calculateTimeLeft());
     const timer = setInterval(() => {
       setTimeLeft(calculateTimeLeft());
-    }, 1000);
+    }, 0);
 
     return () => clearInterval(timer);
   }, []);
+
+  if (timeLeft === null) {
+    return <div>Loading...</div>;
+  }
 
   return (
     <div className="text-center">

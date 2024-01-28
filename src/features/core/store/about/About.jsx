@@ -22,15 +22,15 @@ function About() {
         <div className="mt-28 flex-1 ml-12">
           <h1 className="text-4xl mb-10">Our Story</h1>
           <span className="">
-            Welcome to Exclusive, your ultimate destination for exclusive
-            fashion and lifestyle products. At Exclusive, we believe that
+            Welcome to Techno Market, your ultimate destination for exclusive
+            fashion and lifestyle products. At Techno Market, we believe that
             everyone deserves to experience the latest trends and enjoy
             high-quality products, and that's why we're here to bring you the
             best of the best.
             <br />
             <br />
-            Exclusive has more than 1 Million products to offer, growing at a
-            very fast. Exclusive offers a diverse assotment in categories
+            Techno Market has more than 1 Million products to offer, growing at
+            a very fast. Techno Market offers a diverse assotment in categories
             ranging from consumer.
           </span>
         </div>
@@ -38,7 +38,7 @@ function About() {
           <Image src={aboutImage} alt="about" width={600} height={600} />
         </div>
       </div>
-      
+
       <div>
         <h1 className="text-4xl text-center mt-20 mb-20">OUR STATS</h1>
       </div>
@@ -78,7 +78,7 @@ function About() {
             <Image src={servicescart} alt="services" width={100} height={100} />
           </div>
           <h2 className="text-xl font-semibold mt-2">45.5K</h2>
-          <p className="text-sm font-semibold text-neutral-950 mt-2">
+          <p className="text-sm font-semibold text-neutral-950 mt-2 ml-4">
             Customers active in our site
           </p>
         </div>
@@ -165,7 +165,12 @@ function About() {
           <p className="">We offer free delivery for all orders over $100</p>
         </div>
         <div>
-          <Image src={customerserv} alt="customerservice" width={100} height={100} />
+          <Image
+            src={customerserv}
+            alt="customerservice"
+            width={100}
+            height={100}
+          />
           <h1 className="font-semibold">24/7 CUSTOMER SERVICE</h1>
           <p className="">We have a 24/7 customer service team.</p>
         </div>
