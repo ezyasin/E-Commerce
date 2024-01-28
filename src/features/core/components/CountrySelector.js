@@ -19,8 +19,8 @@ const CountrySelector = () => {
   const [selectedCountry, setSelectedCountry] = useState(countries[0]);
 
   const handleChange = (event) => {
-    setSelectedCountry(countries[event.target.value]);
-    onSelect(countries[event.target.value]);
+    const selectedCountry = countries.find(country => country.id === parseInt(event.target.value));
+    setSelectedCountry(selectedCountry);
   };
 
   return (
