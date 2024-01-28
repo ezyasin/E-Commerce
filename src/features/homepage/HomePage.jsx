@@ -60,7 +60,6 @@ export default function HomePage() {
     },
   ];
 
-  // AI SUPPORT RECOMMENDATION MOCK DATA TEMP
   const recommendProducts = [
     { id: 1, name: "Product 1", description: "Description 1", price: 29.99 },
     { id: 2, name: "Product 2", description: "Description 2", price: 29.99 },
@@ -76,15 +75,15 @@ export default function HomePage() {
       <div className="flex">
         <div className="flex pt-2 ml-20 mr-40 mt-4">
           <ul className="border-r-2 pr-8 space-y-2">
-            <li>Woman's Fashion</li>
-            <li>Men's Fashion</li>
-            <li>Electronics</li>
-            <li>Home & Lifestyle</li>
-            <li>Medicine</li>
-            <li>Sports & Outdoor</li>
-            <li>Boby's & Toys</li>
-            <li>Groceries & Pets</li>
-            <li>Health & Beauty</li>
+            <li>Smartphones & Accessories</li>
+            <li>Laptops & Computers</li>
+            <li>Audio & Headphones</li>
+            <li>Smart Home Devices</li>
+            <li>Wearables & Fitness Tech</li>
+            <li>Gaming Gear</li>
+            <li>Camera & Photography</li>
+            <li>Tech Gadgets</li>
+            <li>Networking & Accessories</li>
           </ul>
         </div>
         <div className="flex flex-1 mr-40 bg-black text-white p-8 mt-4">
@@ -117,7 +116,7 @@ export default function HomePage() {
         ))}
       </div>
       <div className="flex justify-center my-10 border-b-2 pb-8">
-        <button className="bg-red-600 w-36 h-12 text-gray-200">
+        <button className="bg-red-600 w-36 h-12 text-white">
           View All Product
         </button>
       </div>
@@ -169,7 +168,7 @@ export default function HomePage() {
           ))}
         </div>
         <div className="flex justify-center my-10 border-b-2 pb-8">
-          <button className="bg-red-600 w-36 h-12 text-gray-200">
+          <button className="bg-red-600 w-36 h-12 text-white">
             View All Product
           </button>
         </div>
