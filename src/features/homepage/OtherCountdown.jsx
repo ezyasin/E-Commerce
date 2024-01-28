@@ -1,6 +1,4 @@
-// INCOMPLETE
-
-import { useEffect, useState } from "react";
+import { useState, useEffect } from "react";
 
 const CountdownCircle = ({ value, label }) => {
   return (
@@ -14,40 +12,39 @@ const CountdownCircle = ({ value, label }) => {
 };
 
 const OtherCountdown = () => {
-  const [days, setDays] = useState(6);
-  const [hours, setHours] = useState(23);
-  const [minutes, setMinutes] = useState(59);
-  const [seconds, setSeconds] = useState(2);
+  const calculateTimeLeft = () => {
+    const now = new Date();
+    const targetDate = new Date("2024-06-14T23:59:59");
+    const difference = targetDate - now;
+
+    if (difference > 0) {
+      const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+      const hours = Math.floor(
+        (difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+      );
+      const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+      return { days, hours, minutes, seconds };
+    } else {
+      return { days: 0, hours: 0, minutes: 0, seconds: 0 };
+    }
+  };
+
+  const [timeLeft, setTimeLeft] = useState(null);
 
   useEffect(() => {
-    // const interval = setInterval(updateCountdown, 1000);
-    // return () => clearInterval(interval);
+    setTimeLeft(calculateTimeLeft());
+    const timer = setInterval(() => {
+      setTimeLeft(calculateTimeLeft());
+    }, 1000);
+
+    return () => clearInterval(timer);
   }, []);
 
-  //   const updateCountdown = () => {
-  //     setSeconds((prevSeconds) => (prevSeconds === 0 ? 59 : prevSeconds - 1));
-  //     setMinutes((prevMinutes) =>
-  //       prevSeconds === 0
-  //         ? prevMinutes === 0
-  //           ? 59
-  //           : prevMinutes - 1
-  //         : prevMinutes
-  //     );
-  //     setHours((prevHours) =>
-  //       prevSeconds === 0 && prevMinutes === 0
-  //         ? prevHours === 0
-  //           ? 23
-  //           : prevHours - 1
-  //         : prevHours
-  //     );
-  //     setDays((prevDays) =>
-  //       prevSeconds === 0 && prevMinutes === 0 && prevHours === 0
-  //         ? prevDays === 0
-  //           ? 0
-  //           : prevDays - 1
-  //         : prevDays
-  //     );
-  //   };
+  if (timeLeft === null) {
+    return <div>Loading...</div>;
+  }
 
   const padNumber = (number) => {
     return number.toString().padStart(2, "0");
@@ -56,21 +53,13 @@ const OtherCountdown = () => {
   return (
     <div className="flex items-center my-8">
       <div className="grid grid-cols-4 gap-8">
-        <CountdownCircle value={padNumber(days)} label="Days" />
-        <CountdownCircle value={padNumber(hours)} label="Hours" />
-        <CountdownCircle value={padNumber(minutes)} label="Minutes" />
-        <CountdownCircle value={padNumber(seconds)} label="Seconds" />
+        <CountdownCircle value={padNumber(timeLeft.days)} label="Days" />
+        <CountdownCircle value={padNumber(timeLeft.hours)} label="Hours" />
+        <CountdownCircle value={padNumber(timeLeft.minutes)} label="Minutes" />
+        <CountdownCircle value={padNumber(timeLeft.seconds)} label="Seconds" />
       </div>
     </div>
   );
 };
 
-const Home = () => {
-  return (
-    <div>
-      <OtherCountdown />
-    </div>
-  );
-};
-
-export default Home;
+export default OtherCountdown;
